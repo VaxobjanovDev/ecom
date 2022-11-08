@@ -1,25 +1,17 @@
-import { IconType } from "../../types/utility.types";
+import {IconType} from "../../types/utility.types";
 
-export const UserIcon: IconType = ({width,height, fill, }) => (
+export const UserIcon: IconType = ({width, height, fill,}) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
     width={width}
     height={height}
-    viewBox="0 0 27 29"
-    fill={fill ?? "white"}
-    xmlns="http://www.w3.org/2000/svg"
+    fill={fill}
+    version="1"
+    viewBox="0 0 64 64"
   >
-    <g clipPath="url(#clip0_525_2485)">
-      <path
-        d="M19.5 9C19.5 14 16.5 18 13.5 18C10.5 18 7.5 14 7.5 9C7.5 4 9.5 1 13.5 1C17.5 1 19.5 4 19.5 9ZM1.5 28H25.5C25.5 19 19.5 18 13.5 18C7.5 18 1.5 19 1.5 28Z"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_525_2485">
-        <rect width="26" height="29" transform="translate(0.5)" />
-      </clipPath>
-    </defs>
+    <path
+      d="M249 617C106 577 17 463 16 319c0-55 6-78 32-132 18-36 47-78 65-93C270-39 498 3 589 182c29 58 34 77 34 138s-5 80-34 138c-65 128-210 195-340 159zm140-143c57-47 50-137-13-175-17-10-42-19-56-19-37 0-85 33-99 69-30 71 22 151 99 151 27 0 48-8 69-26zm51-227c32-16 41-74 14-94-25-18-243-18-268 0-27 20-18 78 14 94 33 17 207 17 240 0z"
+      transform="matrix(.1 0 0 -.1 0 64)"
+    ></path>
   </svg>
 );

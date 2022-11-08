@@ -1,6 +1,6 @@
 import {IconType} from "../../types/utility.types";
 
-export const NotificationiCon:IconType = ({width,height,fill})=>{
+export const NotificationIcon:IconType = ({width,height,fill})=>{
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
