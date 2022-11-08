@@ -1,14 +1,26 @@
-import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 import { BaseLayout } from "../../src/layout/base-layout";
 import { ProductDetail } from "../../src/modules/detail";
+import {PropsCard} from "../../src/types/cardType";
+
+
+function Detail({ cardInfo }: PropsCard) {
+  return (
+    <BaseLayout>
+      <ProductDetail cardInfo={cardInfo} />
+    </BaseLayout>
+  );
+}
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
 
-  const { params } = context
+  const {req, params } = context
+
+    let host = req?.headers.host || "localhost:3000"
+
 
   const response = await fetch(
-    `https://${window.location.hostname}/api/getbyId?id=${params.id}`
+    `http://${host}/api/getbyId?id=${params.id}`
   )
   const data = await response.json()
 
@@ -45,13 +57,6 @@ export async function getStaticPaths() {
   }
 }
 
-const Detail: NextPage = ({ cardInfo }: any) => {
-  return (
-    <BaseLayout>
-      <ProductDetail cardInfo={cardInfo} />
-    </BaseLayout>
-  );
-};
 
 export default Detail;
 

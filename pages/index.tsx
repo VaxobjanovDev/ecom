@@ -4,9 +4,20 @@ import { MainComponent } from "../src/modules/main";
 import { DataType } from "../src/types/cardType";
 
 
-export const getStaticProps: GetStaticProps = async () => {
+function Home ({ data }: DataType){
+  return (
+    <BaseLayout>
+      <MainComponent data={data} />
+    </BaseLayout>
+  );
+};
 
-  const res = await fetch(`https://${window.location.hostname}/api/products`)
+export const getStaticProps: GetStaticProps = async (context: any) => {
+  const {req} = context
+
+  let host = req?.headers.host || "localhost:3000"
+
+  const res = await fetch(`http://${host}/api/products`)
 
   const data = await res.json()
 
@@ -17,13 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-const Home = ({ data }: DataType) => {
-  return (
-    <BaseLayout>
-      <MainComponent data={data} />
-    </BaseLayout>
-  );
-};
+
 
 export default Home;
 
