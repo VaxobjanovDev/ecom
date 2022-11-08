@@ -1,7 +1,7 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper";
 
-import {SliderBox} from "./slider.styles";
+import {SliderBox, SliderImage} from "./slider.styles";
 
 interface ImgProps {
   sliderImg: string
@@ -20,22 +20,22 @@ export default function SliderCard({sliderImg}: ImgProps) {
         }}
       >
         <SwiperSlide>
-          <img src={sliderImg} alt={"SliderImage"}/>
+          <SliderImage src={sliderImg} alt={"SliderImage"}/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} alt={"SliderImage"}/>
+          <SliderImage src={sliderImg} alt={"SliderImage"}/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} alt={"SliderImage"}/>
+          <SliderImage src={sliderImg} alt={"SliderImage"}/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} alt={"SliderImage"}/>
+          <SliderImage src={sliderImg} alt={"SliderImage"}/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} alt={"SliderImage"}/>
+          <SliderImage src={sliderImg} alt={"SliderImage"}/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} alt={"SliderImage"}/>
+          <SliderImage src={sliderImg} alt={"SliderImage"}/>
         </SwiperSlide>
       </Swiper>
     </SliderBox>

@@ -6,7 +6,7 @@ import { DataType } from "../src/types/cardType";
 
 export const getStaticProps: GetStaticProps = async () => {
 
-  const res = await fetch("http://localhost:3000/api/products")
+  const res = await fetch(`https://${window.location.hostname}/api/products`)
 
   const data = await res.json()
 

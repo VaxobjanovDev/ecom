@@ -18,11 +18,12 @@ export const SliderBox = styled.div`
     background-position: center;
     background-size: cover;
   }
+  
+`
 
-  .swiper-slide img {
+export const SliderImage = styled.img`
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
 `

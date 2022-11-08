@@ -8,7 +8,7 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
   const { params } = context
 
   const response = await fetch(
-    `http://localhost:3000/api/getbyId?id=${params.id}`
+    `https://${window.location.hostname}/api/getbyId?id=${params.id}`
   )
   const data = await response.json()
 
